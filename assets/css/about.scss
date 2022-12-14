@@ -1,2 +1,30 @@
 ---
 ---
+
+#main {
+  .h-entry {
+    width: 100%;
+  }
+}
+
+#key-skills {
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      padding: 0 1rem;
+    }
+  }
+}
+
+#work-experience {
+  .entry {
+    .header {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
