@@ -1,73 +1,18 @@
 <div id="work-experience">
-  <h2>Work experience</h2>
+  <h1>Work experience</h1>
 
-  <div class="entry">
-    <div class="header">
-      <p>Fullstack Team Lead</p>
-      <p>June 2019 - December 2019</p>
+  {% for role in site.data.work_roles %}
+    <div class="entry">
+      <div class="header">
+        <em>{{ role.name }}</em>
+        <em class="text-accent">{{ role.start_date | date: "%B %Y" }} - {{ role.end_date | date: "%B %Y" }}</em>
+      </div>
+      <p>{{ role.description }}</p>
+      <ul class="enumeration">
+        {% for item in role.items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
     </div>
-    <ul>
-      <li>Became team lead for the DevOps team</li>
-      <li>Diversied the skill set of the team by training FE engineers to become fullstack</li>
-      <li>Definition and implementation of best practices and coding standards</li>
-      <li>Conducted performance reviews, held regular 1-1 meetings</li>
-      <li>Improved and maintained an Apache Mesos cluster</li>
-      <li>Improved application deployment process by creating a generic CI/CD pipeline</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="header">
-      <p>Frontend Team Lead</p>
-      <p>July 2016 - June 2019</p>
-    </div>
-    <ul>
-      <li>Managed team members' technical development</li>
-      <li>Conducted performance reviews, held regular 1-1 meetings</li>
-      <li>Took part in recruitment and interview process</li>
-      <li>Grew the team from 3 to 15 engineers</li>
-      <li>Involved in estimation, implementation and delivery of projects</li>
-      <li>Mentored juniors and monitored progress of each team member</li>
-      <li>Designed application architectures and developed internal libraries and tooling</li>
-      <li>Reduced application development time by creating a starter kit with Rails and React</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="header">
-      <p>Fullstack Software Engineer</p>
-      <p>January 2015 - December 2019</p>
-    </div>
-    <ul>
-      <li>Developed SPAs using React</li>
-      <li>Developed web applications and RESTful APIs using Ruby on Rails</li>
-      <li>Implemented data visualizations using D3</li>
-      <li>Mentored juniors</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="header">
-      <p>Backend Software Engineer</p>
-      <p>August 2010 - December 2014</p>
-    </div>
-    <ul>
-      <li>Developed web applications and RESTful APIs using Ruby on Rails</li>
-      <li>Designed database schemas</li>
-      <li>Congured Linux servers for application deployment</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="header">
-      <p>PHP Web Developer</p>
-      <p>September 2009 - April 2010</p>
-    </div>
-    <ul>
-      <li>Developed websites using PHP and Joomla</li>
-      <li>Implemented mockups in HTML and CSS with cross-browser support</li>
-      <li>Developed custom features as Joomla plugins</li>
-      <li>Deployed and maintained applications through CPanel</li>
-    </ul>
-  </div>
+  {% endfor %}
 </div>

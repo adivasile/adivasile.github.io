@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Digital Presentations Platform",
+    "short_desc": "Technical Lead for a platform for digital presentations used in sales pitches.",
+    "long_desc": "It consisted of over 70 custom presentations built with React and an application to manage user access to each presentation, all running in Docker containers hosted on an Apache Mesos + Marathon cluster",
+    "items": [
+      "Coordinated team members in implementation of tasks",
+      "Identied commonly used patterns and extract into reusable components",
+      "Designed Gitlab CI pipeline for application deployment",
+      "Implemented monitoring and access analytics solution with an ELK stack",
+      "Developed project generator for quickly setting up a new presentation",
+      "Developed Ansible playbooks for server management"
+    ]
+  },
+  {
+    "name": "Data Lake Project",
+    "short_desc": "Data ingestion and processing platform for use in data science projects",
+    "long_desc": "This project was a Ruby on Rails backend application that orchestrated worker processes that would run ingestion as scheduled. The ingestion processes would cleanse and normalize the data to a common format to be loaded into an ElasticSearch cluster for fast search and retrieval I was the Technical Lead on this project and some of my responsibilities were:",
+    "items": [
+      "Discussed technical requirements with the client",
+      "Coordinated team members in implementation of tasks",
+      "Designed and implemented data ingestion pipeline",
+      "Dened process and workow needed to load new data sets into the platform",
+      "Designed and implemented a monitoring solution"
+    ]
+  },
+  {
+    "name": "Internal UI Development Kit",
+    "short_desc": "I was the Lead Developer on the internal UI kit used in our SPAs. I started it in early 2015 as just a React project boilerplate and it was extended with various other functionalities such as: ",
+    "items": [
+      "Library to handle JsonAPI backend integrations",
+      "Generators for common functionalities and components",
+      "Basic themes built with Bootstrap",
+      "Themeable form controls",
+      "Storybook documenting and demonstrating common component use cases"
+    ]
+  },
+  {
+    "name": "Data Analytics Dashboards",
+    "short_desc": "I was involved in a number of projects, for customers in Finance, involving data analytics and display.",
+    "long_desc": "These projects were developed with EmberJS and React, using D3 as a data visualization library. The type of charts ranged from simple line and bar charts, to more complex and custom data display solutions with complex ltering and aggregation capabilities. ",
+    "items": []
+  },
+  {
+    "name": "E-commerce Websites",
+    "short_desc": "Developed various e-commerce applications. Over time I have worked on the full spectrum of functionalities necessary to an e-commerce application: product management, price schemes, order management, checkout processes, payment gateway integration. I was also tasked with application deployment and server congurations.",
+    "items": []
+  }
+]

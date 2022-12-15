@@ -1,25 +1,53 @@
 ---
 layout: about
-title:  "About me"
+title:  ""
 categories: personal
 permalink: /about
 custom_css: about
 ---
 
-{% include about/key_skills.html %}
-{% include about/work_experience.html %}
-{% include about/projects.html %}
+<div id="about">
+  {% include about/key_skills.html %}
+  {% include about/work_experience.html %}
+  {% include about/projects.html %}
 
-<h2>Education</h2>
-<h3>Politehnica University of Bucharest October 2007 - June 2011</h3>
-Bachelor of Computer Science
+  <div id="education">
+    <h1>Education</h1>
 
-<h2>Personal</h2>
-<h3>Languages</h3>
-Romanian - Native
-English - Procient
-German - Beginner
-<h3>Hobbies</h3>
-Music
-Playing guitar
-Snowboarding
+    <div class="entry">
+      <div class="header">
+        <em>Politehnica University of Bucharest</em>
+        <em>October 2007 - June 2011</em>
+      </div>
+      <p>Bachelor of Computer Science</p>
+    </div>
+  </div>
+
+  <div id="personal">
+    <h1>Personal</h1>
+
+    <div class="entry">
+      <div class="header">
+        <em>Languages</em>
+      </div>
+
+      <ul>
+        <li>Romanian - Native</li>
+        <li>English - Procient</li>
+        <li>German - Beginner</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="header">
+        <em>Hobbies</em>
+      </div>
+
+      <ul>
+        <li>Music</li>
+        <li>Playing guitar</li>
+        <li>Snowboarding</li>
+      </ul>
+    </div>
+  </div>
+</div>

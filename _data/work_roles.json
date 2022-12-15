@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Senior Software Engineer",
+    "company": "MyTime",
+    "start_date": "2021-09-01",
+    "end_date": "2022-07-01"
+  },
+  {
+    "name": "Senior Software Engineer",
+    "company": "Marketer",
+    "start_date": "2020-04-01",
+    "end_date": "2021-09-01",
+    "description": "As a Software Developer for the Marketer system, my responsibilities were to ensure continuous development of the platform. In addition, I worked with programmatic integration with major marketing platforms, such as Facebook, Instagram, Google and others. Some of my tasks included:",
+    "items": [
+      "Ensuring successful planning, development and launch of new solutions and features",
+      "Maintaining stability and performance in our existing logic and systems",
+      "Collaborating with everyone in the development team, as well as other relevant departments within the company"
+    ]
+  },
+  {
+    "name": "Fullstack Team Lead",
+    "company": "Sparktech Software",
+    "start_date": "2019-06-01",
+    "end_date": "2019-12-01",
+    "items": [
+      "Became team lead for the DevOps team",
+      "Diversied the skill set of the team by training FE engineers to become fullstack",
+      "Definition and implementation of best practices and coding standards",
+      "Conducted performance reviews, held regular 1-1 meetings",
+      "Improved and maintained an Apache Mesos cluster",
+      "Improved application deployment process by creating a generic CI/CD pipeline"
+    ]
+  },
+  {
+    "name": "Frontend Team Lead",
+    "company": "Sparktech Software",
+    "start_date": "2016-07-01",
+    "end_date": "2019-06-01",
+    "items": [
+      "Managed team members' technical development",
+      "Conducted performance reviews, held regular 1-1 meetings",
+      "Took part in recruitment and interview process",
+      "Grew the team from 3 to 15 engineers",
+      "Involved in estimation, implementation and delivery of projects",
+      "Mentored juniors and monitored progress of each team member",
+      "Designed application architectures and developed internal libraries and tooling",
+      "Reduced application development time by creating a starter kit with Rails and React"
+    ]
+  },
+  {
+    "name": "Fullstack Software Engineer",
+    "company": "Sparktech Software",
+    "start_date": "2015-01-01",
+    "end_date": "2019-12-01",
+    "items": [
+      "Developed SPAs using React",
+      "Developed web applications and RESTful APIs using Ruby on Rails",
+      "Implemented data visualizations using D3",
+      "Mentored juniors"
+    ]
+  },
+  {
+    "name": "Backend Software Engineer",
+    "company": "Sparktech Software",
+    "start_date": "201--08-01",
+    "end_date": "2014-12-01",
+    "items": [
+      "Developed web applications and RESTful APIs using Ruby on Rails",
+      "Designed database schemas",
+      "Congured Linux servers for application deployment"
+    ]
+  }
+]
