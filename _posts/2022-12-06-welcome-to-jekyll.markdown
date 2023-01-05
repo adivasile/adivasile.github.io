@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title:  "This is a post"
 date:   2022-12-06 14:03:10 +0200
 categories: jekyll update

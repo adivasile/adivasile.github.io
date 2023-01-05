@@ -1,0 +1,12 @@
+.header {
+  .top-bar {
+    @apply bg-ornament h-8 w-full;
+  }
+
+  .content {
+    @apply bg-primary w-full h-32 border-ornament border-b-2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
