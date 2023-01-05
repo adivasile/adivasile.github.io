@@ -4,9 +4,13 @@
   }
 
   .content {
-    @apply bg-primary w-full h-32 border-ornament border-b-2;
+    @apply bg-primary w-full h-24 border-ornament border-b-2;
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+
+  .logo {
+    @apply h-32 w-auto;
   }
 }
