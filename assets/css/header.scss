@@ -3,8 +3,13 @@
     @apply bg-ornament h-8 w-full;
   }
 
-  .content {
+  .bottom-bar {
     @apply bg-primary w-full h-24 border-ornament border-b-2;
+  }
+
+  .content {
+    @apply mx-auto h-24;
+    width: 1120px;
     display: flex;
     justify-content: space-around;
     align-items: center;
