@@ -568,10 +568,10 @@ video {
   justify-content: space-between;
 }
 .page-content .left-ornaments img, .page-content .right-ornaments img {
-  height: 9rem;
+  height: 12rem;
 }
 .page-content .left-ornaments img, .page-content .right-ornaments img {
-  width: 9rem;
+  width: 12rem;
 }
 .page-content .left-ornaments .ornament-bottom {
   transform: scaleY(-1);

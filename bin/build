@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm -rf docs/
+jekyll build
+mv _site/ docs/
