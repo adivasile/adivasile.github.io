@@ -1,0 +1,43 @@
+#main .h-entry {
+  width: 100%;
+}
+
+#about p {
+  text-indent: 1rem;
+}
+
+#key-skills ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#key-skills ul li {
+  padding: 0 1rem;
+  border: 1px solid #967D69;
+  border-radius: 1rem;
+  margin: 0.2rem 0.2rem;
+}
+
+.entry .header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid #967D69;
+  margin: 0.5rem 0;
+}
+.entry .header p {
+  margin: 0;
+}
+
+ul.enumeration {
+  margin: 0;
+}
+ul.enumeration li {
+  margin: 0;
+}
+
+.text-accent {
+  color: #967D69;
+}
+
+/*# sourceMappingURL=about.css.map */
