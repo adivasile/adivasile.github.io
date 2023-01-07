@@ -1,5 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+const customColors = {
+  primary: '#323649',
+  secondary: '#2F6271',
+  ornament: '#BA8C4E',
+  font: '#F1F2EE',
+};
+
 module.exports = {
   content: [
     './_drafts/**/*.html',
@@ -11,13 +18,8 @@ module.exports = {
     './*.html',
   ],
   theme: {
-    theme: {
-      extend: {},
-    },
-    colors: {
-      primary: '#323649',
-      secondary: '#2F6271',
-      ornament: '#BA8C4E',
+    extend: {
+      colors: customColors,
     },
     fontFamily: {
       sans: ['Montserrat', ...defaultTheme.fontFamily.sans],

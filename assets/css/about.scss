@@ -1,8 +1,6 @@
 ---
 ---
 
-$accent-1: #FF785A !default;
-$accent-2: #967D69 !default;
 
 #main {
   .h-entry {
@@ -12,48 +10,50 @@ $accent-2: #967D69 !default;
 
 #about {
   p {
+    @apply text-font;
     text-indent: 1rem;
+  }
+
+  h1 {
+    @apply text-2xl text-ornament;
   }
 }
 
 #key-skills {
   ul {
-    list-style-type: none;
-    display: flex;
+    @apply list-none flex my-4;
     justify-content: center;
     flex-wrap: wrap;
 
     li {
-      padding: 0 1rem;
-      border: 1px solid $accent-2;
+      @apply p-3 mx-4 my-2 border-ornament border-2 text-ornament;
       border-radius: 1rem;
-      margin: 0.2rem 0.2rem;
     }
 ;  }
 }
 
 .entry {
   .header {
+    @apply border-ornament border-b-2 text-ornament;
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.1rem solid $accent-2;
     margin: 0.5rem 0;
+  }
 
-    p {
-      margin: 0;
-    }
+  li {
+    @apply text-font;
   }
 }
 
 ul.enumeration {
-  margin: 0;
+  @apply list-disc ml-8;
 
   li {
+    @apply text-font;
     margin: 0;
   }
 }
 
 .text-accent {
-  color: $accent-2;
 }
 

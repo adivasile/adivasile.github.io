@@ -1,7 +1,6 @@
 .page-content {
-  @apply border-ornament h-full border-2 mx-auto mt-12 p-2;
+  @apply border-ornament h-full border-2 mx-auto mt-12 p-2 mb-4;
   width: 80rem; 
-  height: 52rem;
   display: flex;
   justify-content: space-between;
 
@@ -31,10 +30,10 @@
 }
 
 .home-menu {
-  @apply h-full;
+  @apply h-full pt-4;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
   .menu-item {
