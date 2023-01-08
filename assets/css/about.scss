@@ -9,14 +9,12 @@
 }
 
 #about {
+  @apply mx-4 md:mx-8;
   p {
     @apply text-font;
     text-indent: 1rem;
   }
 
-  h1 {
-    @apply text-3xl text-ornament uppercase;
-  }
 }
 
 #key-skills {
@@ -26,7 +24,7 @@
     flex-wrap: wrap;
 
     li {
-      @apply p-3 mx-4 my-2 text-ornament text-2xl border-ornament border-b-2;
+      @apply p-1 md:p-2 mx-2 md:mx-4 md:mx-4 md:mx-4 my-2 text-ornament text-sm md:text-2xl border-ornament border-b-2;
     }
   }
 }
@@ -35,7 +33,7 @@
   @apply mb-8;
 
   .header {
-    @apply border-ornament border-b-2 text-ornament text-lg;
+    @apply border-ornament border-b-2 text-ornament text-base md:text-lg;
     display: flex;
     justify-content: space-between;
     margin: 0.5rem 0;

@@ -2,23 +2,23 @@
   width: 100%;
 }
 
+#about {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  #about {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
 #about p {
   --tw-text-opacity: 1;
   color: rgb(241 242 238/var(--tw-text-opacity));
 }
 #about p {
   text-indent: 1rem;
-}
-#about h1 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-#about h1 {
-  text-transform: uppercase;
-}
-#about h1 {
-  --tw-text-opacity: 1;
-  color: rgb(186 140 78/var(--tw-text-opacity));
 }
 
 #key-skills ul {
@@ -36,8 +36,8 @@
   flex-wrap: wrap;
 }
 #key-skills ul li {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 #key-skills ul li {
   margin-top: 0.5rem;
@@ -51,15 +51,44 @@
   border-color: rgb(186 140 78/var(--tw-border-opacity));
 }
 #key-skills ul li {
-  padding: 0.75rem;
+  padding: 0.25rem;
 }
 #key-skills ul li {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 #key-skills ul li {
   --tw-text-opacity: 1;
   color: rgb(186 140 78/var(--tw-text-opacity));
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .entry {
@@ -73,12 +102,18 @@
   border-color: rgb(186 140 78/var(--tw-border-opacity));
 }
 .entry .header {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .entry .header {
   --tw-text-opacity: 1;
   color: rgb(186 140 78/var(--tw-text-opacity));
+}
+@media (min-width: 768px) {
+  .entry .header {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 .entry .header {
   display: flex;

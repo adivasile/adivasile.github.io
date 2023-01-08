@@ -1,9 +1,16 @@
 .ornament-header {
-  @apply flex my-10 h-8;
-  gap: 2rem;
-  justify-content: center;
+  @apply my-10 h-5 md:h-8 md:gap-8;
+  @apply flex items-center justify-between md:justify-center;
 
   .left {
     transform: scaleX(-1);
+  }
+
+  img {
+    @apply w-24 md:w-48;
+  }
+
+  h1 {
+    @apply text-base md:text-3xl text-ornament uppercase;
   }
 }

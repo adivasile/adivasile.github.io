@@ -511,13 +511,53 @@ video {
 .ornament-header {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+  height: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .ornament-header {
+    height: 2rem;
+    gap: 2rem;
+  }
+}
+.ornament-header {
   display: flex;
-  height: 2rem;
-  gap: 2rem;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .ornament-header {
+    justify-content: center;
+  }
 }
 .ornament-header .left {
   transform: scaleX(-1);
+}
+.ornament-header img {
+  width: 6rem;
+}
+@media (min-width: 768px) {
+  .ornament-header img {
+    width: 12rem;
+  }
+}
+.ornament-header h1 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ornament-header h1 {
+  text-transform: uppercase;
+}
+.ornament-header h1 {
+  --tw-text-opacity: 1;
+  color: rgb(186 140 78/var(--tw-text-opacity));
+}
+@media (min-width: 768px) {
+  .ornament-header h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 .header .top-bar {
@@ -603,13 +643,9 @@ video {
 }
 
 .page-content {
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 3rem;
   margin-bottom: 1rem;
   height: 100%;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 @media (min-width: 768px) {
@@ -623,17 +659,44 @@ video {
   }
 }
 .page-content {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
+@media (min-width: 640px) {
+  .page-content {
+    max-width: 640px;
+  }
+}
 @media (min-width: 768px) {
   .page-content {
-    width: 83.333333%;
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .page-content {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .page-content {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .page-content {
+    max-width: 1536px;
   }
 }
 .page-content {
-  display: flex;
-  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 91.666667%;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(186 140 78/var(--tw-border-opacity));
+  padding: 0.25rem;
   justify-content: space-between;
 }
 .page-content .top-ornaments, .page-content .bottom-ornaments {
@@ -789,23 +852,23 @@ video {
   width: 100%;
 }
 
+#about {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  #about {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
 #about p {
   --tw-text-opacity: 1;
   color: rgb(241 242 238/var(--tw-text-opacity));
 }
 #about p {
   text-indent: 1rem;
-}
-#about h1 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-#about h1 {
-  text-transform: uppercase;
-}
-#about h1 {
-  --tw-text-opacity: 1;
-  color: rgb(186 140 78/var(--tw-text-opacity));
 }
 
 #key-skills ul {
@@ -823,8 +886,8 @@ video {
   flex-wrap: wrap;
 }
 #key-skills ul li {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 #key-skills ul li {
   margin-top: 0.5rem;
@@ -838,15 +901,44 @@ video {
   border-color: rgb(186 140 78/var(--tw-border-opacity));
 }
 #key-skills ul li {
-  padding: 0.75rem;
+  padding: 0.25rem;
 }
 #key-skills ul li {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 #key-skills ul li {
   --tw-text-opacity: 1;
   color: rgb(186 140 78/var(--tw-text-opacity));
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 768px) {
+  #key-skills ul li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .entry {
@@ -860,12 +952,18 @@ video {
   border-color: rgb(186 140 78/var(--tw-border-opacity));
 }
 .entry .header {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .entry .header {
   --tw-text-opacity: 1;
   color: rgb(186 140 78/var(--tw-text-opacity));
+}
+@media (min-width: 768px) {
+  .entry .header {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 .entry .header {
   display: flex;
