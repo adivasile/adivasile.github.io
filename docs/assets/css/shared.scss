@@ -1,0 +1,9 @@
+.ornament-header {
+  @apply flex my-10 h-8;
+  gap: 2rem;
+  justify-content: center;
+
+  .left {
+    transform: scaleX(-1);
+  }
+}

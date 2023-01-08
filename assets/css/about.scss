@@ -15,7 +15,7 @@
   }
 
   h1 {
-    @apply text-2xl text-ornament;
+    @apply text-3xl text-ornament uppercase;
   }
 }
 
@@ -26,10 +26,9 @@
     flex-wrap: wrap;
 
     li {
-      @apply p-3 mx-4 my-2 border-ornament border-2 text-ornament;
-      border-radius: 1rem;
+      @apply p-3 mx-4 my-2 text-ornament text-2xl border-ornament border-b-2;
     }
-;  }
+  }
 }
 
 .entry {
@@ -53,7 +52,3 @@ ul.enumeration {
     margin: 0;
   }
 }
-
-.text-accent {
-}
-
