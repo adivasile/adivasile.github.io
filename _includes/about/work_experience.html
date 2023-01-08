@@ -5,7 +5,10 @@
     <div class="entry">
       <div class="header">
         <em>{{ role.name }}</em>
-        <em class="text-accent">{{ role.start_date | date: "%B %Y" }} - {{ role.end_date | date: "%B %Y" }}</em>
+        <div>
+          <em class="mr-6 not-italic">@ {{ role.company }}</em>
+          <em>{{ role.start_date | date: "%B %Y" }} - {{ role.end_date | date: "%B %Y" }}</em>
+        </div>
       </div>
       <p>{{ role.description }}</p>
       <ul class="enumeration">

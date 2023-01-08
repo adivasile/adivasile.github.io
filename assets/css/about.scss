@@ -32,8 +32,10 @@
 }
 
 .entry {
+  @apply mb-8;
+
   .header {
-    @apply border-ornament border-b-2 text-ornament;
+    @apply border-ornament border-b-2 text-ornament text-lg;
     display: flex;
     justify-content: space-between;
     margin: 0.5rem 0;

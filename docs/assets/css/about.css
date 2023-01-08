@@ -3,95 +3,67 @@
 }
 
 #about p {
-  --tw-text-opacity: 1;
+  --tw-text-opacity:1;
   color: rgb(241 242 238/var(--tw-text-opacity));
-}
-#about p {
   text-indent: 1rem;
 }
 #about h1 {
+  --tw-text-opacity:1;
+  color: rgb(186 140 78/var(--tw-text-opacity));
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-#about h1 {
   text-transform: uppercase;
 }
-#about h1 {
-  --tw-text-opacity: 1;
-  color: rgb(186 140 78/var(--tw-text-opacity));
-}
 
 #key-skills ul {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-#key-skills ul {
+  --tw-border-opacity:1;
+  --tw-text-opacity:1;
+  border-bottom-width: 2px;
+  border-color: rgb(186 140 78/var(--tw-border-opacity));
+  color: rgb(186 140 78/var(--tw-text-opacity));
   display: flex;
-}
-#key-skills ul {
-  list-style-type: none;
-}
-#key-skills ul {
-  justify-content: center;
   flex-wrap: wrap;
-}
-#key-skills ul li {
+  font-size: 1.5rem;
+  justify-content: center;
+  line-height: 2rem;
+  list-style-type: none;
+  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
-}
-#key-skills ul li {
+  margin-top: 1rem;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-#key-skills ul li {
-  border-bottom-width: 2px;
-}
-#key-skills ul li {
-  --tw-border-opacity: 1;
-  border-color: rgb(186 140 78/var(--tw-border-opacity));
-}
-#key-skills ul li {
   padding: 0.75rem;
 }
-#key-skills ul li {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-#key-skills ul li {
-  --tw-text-opacity: 1;
-  color: rgb(186 140 78/var(--tw-text-opacity));
-}
 
+.entry {
+  margin-bottom: 2rem;
+}
 .entry .header {
+  --tw-border-opacity:1;
   border-bottom-width: 2px;
-}
-.entry .header {
-  --tw-border-opacity: 1;
   border-color: rgb(186 140 78/var(--tw-border-opacity));
-}
-.entry .header {
-  --tw-text-opacity: 1;
   color: rgb(186 140 78/var(--tw-text-opacity));
-}
-.entry .header {
   display: flex;
+  font-size: 1.125rem;
   justify-content: space-between;
+  line-height: 1.75rem;
   margin: 0.5rem 0;
 }
+.entry .header, .entry li {
+  --tw-text-opacity:1;
+}
 .entry li {
-  --tw-text-opacity: 1;
   color: rgb(241 242 238/var(--tw-text-opacity));
 }
 
 ul.enumeration {
-  margin-left: 2rem;
   list-style-type: disc;
+  margin-left: 2rem;
 }
 ul.enumeration li {
-  --tw-text-opacity: 1;
+  --tw-text-opacity:1;
   color: rgb(241 242 238/var(--tw-text-opacity));
-}
-ul.enumeration li {
   margin: 0;
 }
 
