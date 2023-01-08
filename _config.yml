@@ -22,7 +22,6 @@ github_username:  adivasile
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-feed
   - jekyll-postcss
 
 postcss:
