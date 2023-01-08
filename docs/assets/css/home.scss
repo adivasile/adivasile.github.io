@@ -1,52 +1,41 @@
 .page-content {
-  @apply border-ornament h-full border-2 mx-auto mt-12 p-2 mb-4;
-  width: 80rem; 
-  display: flex;
+  @apply md:border-ornament h-full md:border-2 mx-auto mt-12 px-1 md:px-2 md:p-4 mb-4;
+  @apply w-full md:w-10/12;
+  @apply flex flex-col;
   justify-content: space-between;
 
-  .left-ornaments, .right-ornaments {
-    display: flex;
-    flex-direction: column;
+  .top-ornaments, .bottom-ornaments {
+    @apply flex flex-row;
     justify-content: space-between;
 
     img {
-      @apply w-48 h-48;
+      @apply h-20 md:h-40;
     }
   }
 
-  .left-ornaments {
-    .ornament-bottom {
-      transform: scaleY(-1);
-    }
-  }
-
-  .right-ornaments {
+  .ornament-left {
     transform: scaleX(-1);
+  }
 
-    .ornament-bottom {
-      transform: scaleY(-1);
-    }
+  .bottom-ornaments {
+    transform: scaleY(-1);
   }
 }
 
 .home-menu {
-  @apply h-full pt-4;
+  @apply h-full pt-4 w-5/6 md:w-4/6 mx-auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 
   .menu-item {
-    @apply bg-primary border-ornament border-2 p-8 mb-4;
-    width: 48rem;
-    height: 14rem;
-    display: flex;
+    @apply bg-primary border-ornament border-2 p-4 md:p-8 mb-4 flex flex-col md:flex-row md:gap-8;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
 
     .menu-item-icon {
-      @apply w-48 h-full my-auto;
+      @apply w-16 h-full my-auto;
 
       img {
         @apply h-full w-full;
@@ -57,11 +46,11 @@
       @apply text-ornament h-full;
 
       h3 {
-        @apply text-2xl my-4;
+        @apply text-lg md:text-2xl my-4 text-center md:text-left;
       }
 
       p {
-        @apply text-xl;
+        @apply text-base md:text-xl indent-4 md:indent-0;
       }
     }
   }

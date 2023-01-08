@@ -20,6 +20,9 @@ module.exports = {
   theme: {
     extend: {
       colors: customColors,
+      fontSize: {
+        xxs: '0.625rem',
+      },
     },
     fontFamily: {
       sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
