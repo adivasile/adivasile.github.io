@@ -2,9 +2,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 const customColors = {
   primary: '#323649',
-  secondary: '#2F6271',
-  ornament: '#BA8C4E',
-  font: '#F1F2EE',
+  secondary: '#BA8C4E',
+  background: '#2F6271',
+  neutral: '#F1F2EE',
 };
 
 module.exports = {

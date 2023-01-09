@@ -1,10 +1,10 @@
 .header {
   .top-bar {
-    @apply bg-ornament h-4 lg:h-8 w-full;
+    @apply bg-secondary h-4 lg:h-8 w-full;
   }
 
   .bottom-bar {
-    @apply bg-primary w-full h-12 lg:h-24 border-ornament border-b-2;
+    @apply bg-primary w-full h-12 lg:h-24 border-secondary border-b-2;
   }
 
   .content {
