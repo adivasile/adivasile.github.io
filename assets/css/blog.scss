@@ -1,0 +1,48 @@
+.article-list {
+  @apply w-2/4 mx-auto;
+
+  li {
+    @apply my-6;
+
+    p.title {
+      @apply text-secondary text-2xl;
+    }
+
+    p.abstract {
+      @apply text-neutral text-lg;
+    }
+  }
+}
+
+.blog-post {
+  @apply text-neutral;
+
+  h1, h2, h3, h4 {
+    @apply text-secondary;
+  }
+
+  h1 {
+    @apply text-4xl my-4;
+  }
+
+  h2 {
+    @apply text-3xl my-2 pl-4;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  p {
+    @apply indent-4;
+  }
+
+  figure {
+    @apply p-8 m-8 border-2 border-secondary;
+    @apply w-96;
+  }
+}

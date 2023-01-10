@@ -8,13 +8,18 @@
   }
 
   .content {
-    @apply mx-auto h-full w-full  md:w-3/4 lg:w-2/4 px-4;
+    @apply mx-auto h-full w-full  md:w-3/4 lg:w-3/4 px-4;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    p {
+      @apply text-center;
+    }
   }
 
   .logo {
-    @apply h-20 lg:h-32 w-auto mx-auto;
+    @apply h-32 lg:h-48 w-auto mx-auto;
+    @apply drop-shadow-2xl;
   }
 }

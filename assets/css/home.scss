@@ -1,11 +1,15 @@
 .page-content {
-  @apply md:border-secondary h-full md:border-2 mt-12 md:px-2 md:p-4 mb-4;
+  @apply md:border-secondary h-full md:border-2 mt-16 md:px-2 md:p-4 mb-4;
   @apply flex flex-col;
   @apply container w-11/12 mx-auto p-1 border-secondary border-2;
   justify-content: space-between;
 
+  .top-ornaments .ornament-title {
+    @apply text-4xl text-secondary uppercase font-normal tracking-widest;
+  }
+
   .top-ornaments, .bottom-ornaments {
-    @apply flex flex-row;
+    @apply flex flex-row items-center;
     justify-content: space-between;
 
     img {
