@@ -1,11 +1,15 @@
 .page-content {
-  @apply md:border-ornament h-full md:border-2 mt-12 md:px-2 md:p-4 mb-4;
+  @apply md:border-secondary h-full md:border-2 mt-16 md:px-2 md:p-4 mb-4;
   @apply flex flex-col;
-  @apply container w-11/12 mx-auto p-1 border-ornament border-2;
+  @apply container w-11/12 mx-auto p-1 border-secondary border-2;
   justify-content: space-between;
 
+  .top-ornaments .ornament-title {
+    @apply text-4xl text-secondary uppercase font-normal tracking-widest;
+  }
+
   .top-ornaments, .bottom-ornaments {
-    @apply flex flex-row;
+    @apply flex flex-row items-center p-2;
     justify-content: space-between;
 
     img {
@@ -29,21 +33,33 @@
   justify-content: space-around;
   align-items: center;
 
+  a {
+    @apply w-full;
+  }
+
   .menu-item {
-    @apply bg-primary border-ornament border-2 p-4 md:p-8 mb-4 flex flex-col md:flex-row md:gap-8;
+    @apply bg-primary border-secondary border-2 p-4 md:p-8 mb-4 flex flex-col md:flex-row md:gap-8;
+    @apply w-11/12;
+    @apply drop-shadow-md;
+    @apply relative;
     align-items: center;
     justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
 
     .menu-item-icon {
       @apply w-16 h-full my-auto;
 
+      transition: transform 0.3s ease-in-out;
+      transition-delay: 0.05s;
       img {
         @apply h-full w-full;
       }
     }
 
     .menu-item-content {
-      @apply text-ornament h-full;
+      @apply text-secondary h-full;
+      transition: transform 0.3s ease-in-out;
+      transition-delay: 0.05s;
 
       h3 {
         @apply text-lg md:text-2xl my-4 text-center md:text-left;
@@ -52,6 +68,34 @@
       p {
         @apply text-base md:text-xl indent-4 md:indent-0;
       }
+    }
+  }
+
+  .menu-item::after {
+    position: absolute;
+    content: '';
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.3);
+  }
+
+  .menu-item:hover::after {
+    opacity: 1;
+  }
+
+  .menu-item:hover {
+    transform: scale(1.01, 1.01);
+
+    .menu-item-icon {
+      transform: translateY(-10px);
+    }
+    .menu-item-content {
+      transform: translateY(-10px);
     }
   }
 }

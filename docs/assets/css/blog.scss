@@ -1,0 +1,53 @@
+.article-list {
+  @apply w-2/4 mx-auto;
+
+  li {
+    @apply my-6;
+
+    p.title {
+      @apply text-secondary text-2xl;
+    }
+
+    p.abstract {
+      @apply text-neutral text-lg;
+    }
+  }
+}
+
+.blog-post {
+  @apply text-neutral;
+
+  h1, h2, h3, h4 {
+    @apply text-secondary;
+  }
+
+  h1 {
+    @apply text-4xl my-4;
+  }
+
+  h2 {
+    @apply text-3xl my-2 pl-4;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  p {
+    @apply indent-4;
+  }
+
+  figure {
+    @apply py-4 px-2 md:p-8 md:m-8 md:border-2 md:border-secondary;
+    @apply w-full md:w-2/4;
+
+    .lineno {
+      @apply md:mr-4;
+    }
+  }
+
+}
