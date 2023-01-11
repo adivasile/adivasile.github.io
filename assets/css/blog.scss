@@ -42,7 +42,12 @@
   }
 
   figure {
-    @apply p-8 m-8 border-2 border-secondary;
-    @apply w-96;
+    @apply py-4 px-2 md:p-8 md:m-8 md:border-2 md:border-secondary;
+    @apply w-full md:w-2/4;
+
+    .lineno {
+      @apply md:mr-4;
+    }
   }
+
 }

@@ -1,0 +1,110 @@
+.panel {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.panel:hover {
+  transform: perspective(20000px) translateZ(-1000px) rotateX(65deg) rotateZ(45deg);
+}
+
+.sub-panel {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transition-delay: calc(400ms * var(--i));
+}
+
+.panel:hover .sub-panel {
+  transform: translateZ(calc(50px * var(--i)));
+}
+
+.animate-border {
+    position: relative;
+}
+
+.animate-border::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+}
+
+.animate-border:hover::before {
+    animation: animate 560ms linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: black;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: black;
+        border-right-color: black;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: black;
+        border-right-color: black;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+.animate-border::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+}
+ 
+.animate-border:hover::after {
+    animation: animates 500ms linear forwards;
+}
+ 
+@keyframes animates {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: black;
+    }
+ 
+    50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: black;
+        border-left-color: black;
+    }
+ 
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: black;
+        border-left-color: black;
+    }
+}

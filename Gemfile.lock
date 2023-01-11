@@ -102,6 +102,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-postcss
   kramdown-parser-gfm
+  rouge
   rubocop
   tzinfo (~> 1.2)
   tzinfo-data

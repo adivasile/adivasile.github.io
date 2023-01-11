@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 title:  "This is a post"
 abstract: "This is a post about things. Don't you like things? And it also has some stuff"
 date:   2022-12-06 14:03:10 +0200

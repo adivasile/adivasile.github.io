@@ -21,6 +21,8 @@ github_username:  adivasile
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+
 plugins:
   - jekyll-postcss
 
