@@ -9,7 +9,7 @@
   }
 
   .top-ornaments, .bottom-ornaments {
-    @apply flex flex-row items-center;
+    @apply flex flex-row items-center p-2;
     justify-content: space-between;
 
     img {
