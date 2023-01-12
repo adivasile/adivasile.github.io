@@ -21,7 +21,7 @@ Installation is pretty straightforward and detailed instructions are available [
 
 
 {% highlight bash %}
-sh -c "$(curl -fsLS get.chezmoi.io)"
+$ sh -c "$(curl -fsLS get.chezmoi.io)"
 {% endhighlight %}
 
 ## Initialize dotfile repository
@@ -29,7 +29,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)"
 You need to run this in your command line
 
 {% highlight bash %}
-chezmoi init
+$ chezmoi init
 {% endhighlight %}
 
 This will create a new directory at this path `.local/share/chezmoi`. If you don't want to type that path every time, there is a helper command `chezmoi cd` that will take you that directory.
@@ -39,7 +39,7 @@ This will create a new directory at this path `.local/share/chezmoi`. If you don
 Let's add `.zshrc` to the repository. Run this:
 
 {% highlight bash %}
-chezmoi add ~/.zshrc
+$ chezmoi add ~/.zshrc
 {% endhighlight %}
 
 This will create a copy of `.zshrc` and add it to `.local/share/chezmoi`. If you run `chezmoi cd` now, you should see a file named `dot_zshrc` with the same contents as the original `.zshrc`
@@ -53,13 +53,13 @@ You've added your first file now it's time to look at how you would use this day
 Go ahead and make a change in `.local/share/chezmoi/dot_zshrc` and then run
 
 {% highlight bash %}
-chezmoi diff
+$ chezmoi diff
 {% endhighlight %}
 
 You should now see something similar to a git diff, showing you all the changes you've made in the chezmoi folder. If you're happy with those changes just run:
 
 {% highlight bash %}
-chezmoi apply
+$ chezmoi apply
 {% endhighlight %}
 
 This will replace the contents of `~/.zshrc` with what's defined in `.local/share/chezmoi/dot_zshrc`

@@ -1,14 +1,20 @@
 .header {
+  @apply bg-primary border-secondary border-b-2;
+
   .top-bar {
     @apply bg-secondary h-4 lg:h-8 w-full;
   }
 
+  .header-link {
+    top: -3rem;
+    left: 2rem;
+  }
+
   .bottom-bar {
-    @apply bg-primary w-full h-12 lg:h-24 border-secondary border-b-2;
+    @apply w-11/12 mx-auto h-12 lg:h-24 container flex justify-between items-center;
   }
 
   .content {
-    @apply mx-auto h-full w-full  md:w-3/4 lg:w-3/4 px-4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,5 +27,10 @@
   .logo {
     @apply h-32 lg:h-48 w-auto mx-auto;
     @apply drop-shadow-2xl;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .logo:hover {
+    transform: translateY(1rem);
   }
 }

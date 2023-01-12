@@ -9,9 +9,9 @@ layout: default
   {% for post in site.posts %}
     <li>
       <a href={{ post.url }}>
-        <div class="flex justify-between text-secondary text-md border-b-2 border-secondary mb-4">
+        <div class="flex justify-between text-secondary text-md border-b-2 border-secondary mb-4 flex-col md:flex-row items-center">
           <p class="title">{{ post.title }}</p>
-          <p>{{ post.date | date: "%d %B %Y"  }}</p>
+          <p class="post-date">{{ post.date | date: "%d %B %Y"  }}</p>
         </div>
         <p class="abstract">{{ post.abstract }}</a>
       </a>
