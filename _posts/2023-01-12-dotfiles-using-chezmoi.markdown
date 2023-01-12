@@ -106,10 +106,14 @@ First thing you want to do is rename the config file and add a `.tmpl` extension
 In my case this is what I ended up having in my alacritty config
 
 {% highlight yaml %}
-{{ "{{ if eq .chezmoi.os "darwin" }}" | escape }}
+{% raw %}
+{{ if eq .chezmoi.os "darwin" }}
+{% endraw %}
   font:
     size: 11
-{{ "{{ else if eq .chezmoi.os "linux" }}" | escape }}
+{% raw %}
+{{ else if eq .chezmoi.os "linux" }}
+{% endraw %}
   font:
     size: 9
 {{ end }}

@@ -119,10 +119,13 @@
 
 <p>In my case this is what I ended up having in my alacritty config</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{{</span> <span class="nv">if eq .chezmoi.os " | escape</span> <span class="pi">}}</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{{</span> <span class="nv">if eq .chezmoi.os "darwin"</span> <span class="pi">}}</span>
+
   <span class="na">font</span><span class="pi">:</span>
     <span class="na">size</span><span class="pi">:</span> <span class="m">11</span>
-<span class="pi">{{</span> <span class="nv">else if eq .chezmoi.os " | escape</span> <span class="pi">}}</span>
+
+<span class="pi">{{</span> <span class="nv">else if eq .chezmoi.os "linux"</span> <span class="pi">}}</span>
+
   <span class="na">font</span><span class="pi">:</span>
     <span class="na">size</span><span class="pi">:</span> <span class="s">9</span></code></pre></figure>
 
