@@ -7,7 +7,7 @@ date:   2023-01-12 12:59:10 +0200
 
 # Intro
 
-If you're a developer on a Unix-like system you probably have a lot of dotfiles in your `$HOME` folder. Files like `.bashrc`, `.zshrc` and others. Most people will probably have had their first encounter with `.bashrc` when they needed to add something to their `$PATH` or define some other environment variable. These files are used to configure various parts of your system including any software you use during development. 
+If you're a developer on a Unix-like system you probably have a lot of dotfiles in your `$HOME` folder. Files like `.bashrc`, `.zshrc` and others. Most people will probably have had their first encounter with `.bashrc` when they needed to add something to their `$PATH`. These files are used to configure various parts of your system including any software you use during development. 
 
 It is my belief that by starting to pay attention to them and being aware of their structure and what you add to them you'll gain a lot of knowledge about how your system works. This will make it easier to customize your development experience, fix any issues that you may encounter and also replicate the experience on another machine.
 
@@ -22,9 +22,11 @@ The first concept I learned was separating configurations per topic. So instead 
 
 
 ## Symlinks
-The first was putting all dotfiles in a folder and then using a script to automatically symlink everything into my `$HOME` directory. This worked great back then because I was only using `.zshrc` and `.vimrc` and both of then needed to be symlinked into the same directory. Later, when I switched to [neovim](https://neovim.io/) I found that its config file had to be under `~/.config/nvim/init.vim` and this broke the convention that I was using. Not a big issue I thought, I'll just symlink this one file manually. But as I moved to a more command line focused workflow and I added more tools I found that this wasn't scaling very well.
+Next was putting all dotfiles in a folder and then using a script to automatically symlink everything into my `$HOME` directory. In hindsight, this seems like something very obvious but somehow it didn't my mind until that point. This worked great back then because I was only using `.zshrc` and `.vimrc` and both of then needed to be symlinked into the same directory. Later, when I switched to [neovim](https://neovim.io/) I found that its config file had to be under `~/.config/nvim/init.vim` and this broke the convention that I was using. Not a big issue I thought, I'll just symlink this one file manually. But as I moved to a more command line focused workflow and I added more tools I found that this wasn't scaling very well.
 
 So it became clear I needed something else, which is how I ended up finding [chezmoi](https://www.chezmoi.io/).
+
+Beside being able to handle files regardless of where they are located in your home directory it offers a couple other features that I think are very powerful, things like: templating based on your current machine and hooks that allow you to execute something after updating configs
 
 # Guide
 
@@ -45,7 +47,7 @@ You need to run this in your command line
 $ chezmoi init
 {% endhighlight %}
 
-This will create a new directory at this path `.local/share/chezmoi`. If you don't want to type that path every time, there is a helper command `chezmoi cd` that will take you that directory.
+This will create a new directory here: `.local/share/chezmoi`. If you don't want to type that path every time, there is a helper command, `chezmoi cd` that will take there.
 
 ## Add your first dotfile
 
@@ -61,7 +63,7 @@ At this point it may be a good ideea to start tracking changes in this folder wi
 
 ## The workflow
 
-You've added your first file now it's time to look at how you would use this day to day. An important thing to note is that you never want to edit the original files, but always edit only those managed by **chezmoi**.
+You've added your first file, now it's time to look at how you would use this day to day. An important thing to note is that you never want to edit the original files, but always edit only those managed by **chezmoi**.
 
 Go ahead and make a change in `.local/share/chezmoi/dot_zshrc` and then run
 
@@ -95,7 +97,7 @@ This will clone the repository under `.local/share/chezmoi/` and after that you 
 
 ## Using templates
 
-So now you've setup everything, you got stuff working on 2 machines but soon you find yourself wanting to configure the same thing with different values based on the OS. One thing you could do is do a conditional based on the output of `uname -r`. That'll do the job, but it can be a bit clunky. Chezmoi solves this with templates.
+So now you've setup everything, you got stuff working on both machines, but you soon find yourself wanting to configure the same thing with different values based on the OS. One thing you could do is a conditional based on the output of `uname -r`. That'll do the job, but it can be a bit clunky. Chezmoi solves this with templates.
 
 In my case, I wanted different font sizes in my [alacritty](https://github.com/alacritty/alacritty) terminal window based on the machine I was using.
 
@@ -141,7 +143,6 @@ There's a bunch more options available, just check out the [official documentati
 
 # Outro
 
-I hope this was a useful entry for why and how you should start managing your dotfiles.
+I hope this was a useful entry about why and how you should start managing your dotfiles.
 
 Cheers.
-
