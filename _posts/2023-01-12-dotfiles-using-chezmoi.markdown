@@ -93,7 +93,7 @@ When you want to port your dotfiles to another machine you just need to initiali
 $ chezmoi init <url-of-repo>
 {% endhighlight %}
 
-Now the repository will be cloned unde `.local/share/chezmoi/`. After that you just use the regular workflow from before. Check the changes with `chezmoi diff` and apply them with `chezmoi apply`
+Now the repository will be cloned under `.local/share/chezmoi/`. After that you just use the regular workflow from before. Check the changes with `chezmoi diff` and apply them with `chezmoi apply`
 
 ## Using templates
 
