@@ -12,25 +12,28 @@
 
   .bottom-bar {
     @apply w-11/12 mx-auto h-12 lg:h-24 container flex justify-between items-center;
-  }
-
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     p {
-      @apply text-center;
+      @apply w-96;
     }
-  }
 
-  .logo {
-    @apply h-32 lg:h-48 w-auto mx-auto;
-    @apply drop-shadow-2xl;
-    transition: transform 0.3s ease-in-out;
-  }
+    p.occupation {
+      @apply text-end;
+    }
 
-  .logo:hover {
-    transform: translateY(1rem);
+    p.name {
+      @apply text-start;
+    }
+
+    .logo {
+      @apply h-32 lg:h-48 w-auto mx-auto;
+      @apply drop-shadow-2xl;
+        transition: transform 0.3s ease-out;
+    }
+
+    .logo:hover {
+      transform: translateY(0.5rem);
+    }
+
   }
 }
