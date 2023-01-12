@@ -5,9 +5,9 @@
     <div class="entry">
       <div class="header">
         <em>{{ role.name }}</em>
-        <div>
+        <div class="flex justify-between text-sm md:text-base">
           <em class="mr-6 not-italic">@ {{ role.company }}</em>
-          <em>{{ role.start_date | date: "%B %Y" }} - {{ role.end_date | date: "%B %Y" }}</em>
+          <em>{{ role.start_date | date: "%b %Y" }} - {{ role.end_date | date: "%b %Y" }}</em>
         </div>
       </div>
       <p>{{ role.description }}</p>

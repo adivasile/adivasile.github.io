@@ -9,7 +9,7 @@
 }
 
 #about {
-  @apply mx-4 md:mx-8;
+  @apply mx-4 md:mx-8 lg:mx-16;
   p {
     @apply text-neutral;
     text-indent: 1rem;
@@ -33,10 +33,12 @@
   @apply mb-8;
 
   .header {
+
+    em {
+      @apply text-center;
+    }
     @apply border-secondary border-b-2 text-secondary text-base md:text-lg;
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0;
+    @apply flex justify-between flex-col md:flex-row items-center;
   }
 
   li {
