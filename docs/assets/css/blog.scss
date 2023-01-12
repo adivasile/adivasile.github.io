@@ -1,15 +1,19 @@
 .article-list {
-  @apply w-2/4 mx-auto;
+  @apply w-11/12 lg:w-2/4 mx-auto;
 
   li {
     @apply my-6;
 
+    p.post-date {
+      @apply text-xs md:text-base;
+    }
+
     p.title {
-      @apply text-secondary text-2xl;
+      @apply text-secondary text-lg md:text-2xl;
     }
 
     p.abstract {
-      @apply text-neutral text-lg;
+      @apply text-neutral text-lg indent-4;
     }
   }
 }
@@ -22,11 +26,11 @@
   }
 
   h1 {
-    @apply text-4xl my-4;
+    @apply text-4xl my-6 mt-12 text-center;
   }
 
   h2 {
-    @apply text-3xl my-2 pl-4;
+    @apply text-3xl my-4 pl-4;
   }
 
   h3 {
@@ -38,16 +42,31 @@
   }
 
   p {
-    @apply indent-4;
+    @apply indent-4 mb-4 text-lg m-4 md:mx-16;
   }
 
   figure {
-    @apply py-4 px-2 md:p-8 md:m-8 md:border-2 md:border-secondary;
-    @apply w-full md:w-2/4;
+    @apply py-4 px-2 md:p-6 md:my-8 mx-auto md:border-2 md:border-secondary rounded-lg;
+    @apply w-full md:w-3/4;
 
     .lineno {
       @apply md:mr-4;
     }
   }
 
+  code {
+    @apply text-sm md:text-base font-semibold align-middle text-secondary;
+  }
+
+  a {
+    @apply text-neutral font-bold border-b-2 border-neutral;
+  }
+
+  a:hover {
+    @apply text-secondary border-secondary;
+  }
+
+  ol {
+    @apply list-decimal mx-16;
+  }
 }
