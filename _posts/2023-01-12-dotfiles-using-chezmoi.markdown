@@ -137,7 +137,7 @@ One thing I wanted to do was reload my ZSH config whenever I would apply changes
 In my case I have a `run_after_reload.sh` script that just reloads my ZSH config
 
 {% highlight sh %}
-# run_after_reload.rh
+# run_after_reload.sh
 #!/bin/zsh
 . ~/.zshrc
 {% endhighlight %}
