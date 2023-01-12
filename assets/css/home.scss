@@ -91,11 +91,5 @@
   .menu-item:hover {
     transform: scale(1.01, 1.01);
 
-    .menu-item-icon {
-      transform: translateY(-10px);
-    }
-    .menu-item-content {
-      transform: translateY(-10px);
-    }
   }
 }
