@@ -22,11 +22,11 @@ The first concept I learned was separating configurations per topic. So instead 
 
 
 ## Symlinks
-Next was putting all dotfiles in a folder and then using a script to automatically symlink everything into my `$HOME` directory. In hindsight, this seems like something very obvious but somehow it didn't my mind until that point. This worked great back then because I was only using `.zshrc` and `.vimrc` and both of then needed to be symlinked into the same directory. Later, when I switched to [neovim](https://neovim.io/) I found that its config file had to be under `~/.config/nvim/init.vim` and this broke the convention that I was using. Not a big issue I thought, I'll just symlink this one file manually. But as I moved to a more command line focused workflow and I added more tools I found that this wasn't scaling very well.
+Next was putting all dotfiles in a folder and then using a script to automatically symlink everything into my `$HOME` directory. In hindsight, this seems like something very obvious but somehow it didn't cross my mind until that point. This worked great back then because I was only using `.zshrc` and `.vimrc` and both of them needed to be symlinked into the same directory. Later, when I switched to [neovim](https://neovim.io/) I found that its config file had to be under `~/.config/nvim/init.vim` and this broke the convention that I was using. Not a big issue I thought, I'll just symlink this one file manually. But as I moved to a more command line focused workflow and I added more tools I found that this wasn't scaling very well.
 
 So it became clear I needed something else, which is how I ended up finding [chezmoi](https://www.chezmoi.io/).
 
-Beside being able to handle files regardless of where they are located in your home directory it offers a couple other features that I think are very powerful, things like: templating based on your current machine and hooks that allow you to execute something after updating configs
+Beside being able to handle files regardless of where they are located in your home directory, it offers a couple other features that I think are very powerful: templating based on your current machine and hooks that allow you to execute something after updating configs
 
 # Guide
 
@@ -47,7 +47,7 @@ You need to run this in your command line
 $ chezmoi init
 {% endhighlight %}
 
-This will create a new directory here: `.local/share/chezmoi`. If you don't want to type that path every time, there is a helper command, `chezmoi cd` that will take there.
+It will create a new directory here: `.local/share/chezmoi`. If you don't want to type that path every time, there is a helper command, `chezmoi cd` that will take there.
 
 ## Add your first dotfile
 
@@ -93,7 +93,7 @@ When you want to port your dotfiles to another machine you just need to initiali
 $ chezmoi init <url-of-repo>
 {% endhighlight %}
 
-This will clone the repository under `.local/share/chezmoi/` and after that you just use the regular workflow from before. Check the changes with `chezmoi diff` and apply them with `chezmoi apply`
+Now the repository will be cloned unde `.local/share/chezmoi/`. After that you just use the regular workflow from before. Check the changes with `chezmoi diff` and apply them with `chezmoi apply`
 
 ## Using templates
 
@@ -119,7 +119,7 @@ In my case this is what I ended up having in my alacritty config
 {{ end }}
 {% endhighlight %}
 
-To see all the data points chezmoi knows about you can run:
+To see all the data points chezmoi knows about, you can run:
 
 {% highlight sh %}
 $ chezmoi data
@@ -132,7 +132,7 @@ For more info check out the [official documentation](https://www.chezmoi.io/user
 
 ## Using hooks
 
-One thing I wanted to do was reload my ZSH config whenever I would apply changes with chezmoi. You can do that using scripts created your dotfile repository. The names of these scripts have to start with `run_`. After that you can add `before_` or `after_` to indicate if they should run before changes are applied or after. So you'd have something like `run_after_`.
+One thing I wanted to do was reload my ZSH config whenever I would apply changes with chezmoi. You can do that with scripts in your dotfile repository. Their names have to start with `run_`. After that you can add `before_` or `after_` to indicate if they should run before changes are applied or after. So you'd have something like `run_after_*.sh`.
 
 In my case I have a `run_after_reload.sh` script that just reloads my ZSH config
 

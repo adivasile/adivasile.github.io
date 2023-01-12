@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://adrianvasile.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://adrianvasile.dev/" rel="alternate" type="text/html" /><updated>2023-01-12T14:41:03+02:00</updated><id>https://adrianvasile.dev/feed.xml</id><title type="html">Adrian Vasile</title><subtitle></subtitle><entry><title type="html">Managing dotfiles with Chezmoi</title><link href="https://adrianvasile.dev/2023/01/12/dotfiles-using-chezmoi.html" rel="alternate" type="text/html" title="Managing dotfiles with Chezmoi" /><published>2023-01-12T12:59:10+02:00</published><updated>2023-01-12T12:59:10+02:00</updated><id>https://adrianvasile.dev/2023/01/12/dotfiles-using-chezmoi</id><content type="html" xml:base="https://adrianvasile.dev/2023/01/12/dotfiles-using-chezmoi.html"><![CDATA[<h1 id="intro">Intro</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://adrianvasile.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://adrianvasile.dev/" rel="alternate" type="text/html" /><updated>2023-01-12T14:56:39+02:00</updated><id>https://adrianvasile.dev/feed.xml</id><title type="html">Adrian Vasile</title><subtitle></subtitle><entry><title type="html">Managing dotfiles with Chezmoi</title><link href="https://adrianvasile.dev/2023/01/12/dotfiles-using-chezmoi.html" rel="alternate" type="text/html" title="Managing dotfiles with Chezmoi" /><published>2023-01-12T12:59:10+02:00</published><updated>2023-01-12T12:59:10+02:00</updated><id>https://adrianvasile.dev/2023/01/12/dotfiles-using-chezmoi</id><content type="html" xml:base="https://adrianvasile.dev/2023/01/12/dotfiles-using-chezmoi.html"><![CDATA[<h1 id="intro">Intro</h1>
 
 <p>If you’re a developer on a Unix-like system you probably have a lot of dotfiles in your <code class="language-plaintext highlighter-rouge">$HOME</code> folder. Files like <code class="language-plaintext highlighter-rouge">.bashrc</code>, <code class="language-plaintext highlighter-rouge">.zshrc</code> and others. Most people will probably have had their first encounter with <code class="language-plaintext highlighter-rouge">.bashrc</code> when they needed to add something to their <code class="language-plaintext highlighter-rouge">$PATH</code>. These files are used to configure various parts of your system including any software you use during development.</p>
 
@@ -14,11 +14,11 @@
 <p>The first concept I learned was separating configurations per topic. So instead of having one big <code class="language-plaintext highlighter-rouge">.zshrc</code> where I defined environment variables for everything I used, I could break these up in smaller files. So I had a <code class="language-plaintext highlighter-rouge">java</code> folder where I had config files for everything related to <code class="language-plaintext highlighter-rouge">java</code>, one for <code class="language-plaintext highlighter-rouge">ruby</code> and so on. Then <code class="language-plaintext highlighter-rouge">.zshrc</code> would just need to source all those topic files based on some convention. You can take this one step further and have multiple files within each topic: one for adding to <code class="language-plaintext highlighter-rouge">$PATH</code>, one for defining environment variables and so on.</p>
 
 <h2 id="symlinks">Symlinks</h2>
-<p>Next was putting all dotfiles in a folder and then using a script to automatically symlink everything into my <code class="language-plaintext highlighter-rouge">$HOME</code> directory. In hindsight, this seems like something very obvious but somehow it didn’t my mind until that point. This worked great back then because I was only using <code class="language-plaintext highlighter-rouge">.zshrc</code> and <code class="language-plaintext highlighter-rouge">.vimrc</code> and both of then needed to be symlinked into the same directory. Later, when I switched to <a href="https://neovim.io/">neovim</a> I found that its config file had to be under <code class="language-plaintext highlighter-rouge">~/.config/nvim/init.vim</code> and this broke the convention that I was using. Not a big issue I thought, I’ll just symlink this one file manually. But as I moved to a more command line focused workflow and I added more tools I found that this wasn’t scaling very well.</p>
+<p>Next was putting all dotfiles in a folder and then using a script to automatically symlink everything into my <code class="language-plaintext highlighter-rouge">$HOME</code> directory. In hindsight, this seems like something very obvious but somehow it didn’t cross my mind until that point. This worked great back then because I was only using <code class="language-plaintext highlighter-rouge">.zshrc</code> and <code class="language-plaintext highlighter-rouge">.vimrc</code> and both of them needed to be symlinked into the same directory. Later, when I switched to <a href="https://neovim.io/">neovim</a> I found that its config file had to be under <code class="language-plaintext highlighter-rouge">~/.config/nvim/init.vim</code> and this broke the convention that I was using. Not a big issue I thought, I’ll just symlink this one file manually. But as I moved to a more command line focused workflow and I added more tools I found that this wasn’t scaling very well.</p>
 
 <p>So it became clear I needed something else, which is how I ended up finding <a href="https://www.chezmoi.io/">chezmoi</a>.</p>
 
-<p>Beside being able to handle files regardless of where they are located in your home directory it offers a couple other features that I think are very powerful, things like: templating based on your current machine and hooks that allow you to execute something after updating configs</p>
+<p>Beside being able to handle files regardless of where they are located in your home directory, it offers a couple other features that I think are very powerful: templating based on your current machine and hooks that allow you to execute something after updating configs</p>
 
 <h1 id="guide">Guide</h1>
 
@@ -34,7 +34,7 @@
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>chezmoi init</code></pre></figure>
 
-<p>This will create a new directory here: <code class="language-plaintext highlighter-rouge">.local/share/chezmoi</code>. If you don’t want to type that path every time, there is a helper command, <code class="language-plaintext highlighter-rouge">chezmoi cd</code> that will take there.</p>
+<p>It will create a new directory here: <code class="language-plaintext highlighter-rouge">.local/share/chezmoi</code>. If you don’t want to type that path every time, there is a helper command, <code class="language-plaintext highlighter-rouge">chezmoi cd</code> that will take there.</p>
 
 <h2 id="add-your-first-dotfile">Add your first dotfile</h2>
 
@@ -73,7 +73,7 @@
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>chezmoi init &lt;url-of-repo&gt;</code></pre></figure>
 
-<p>This will clone the repository under <code class="language-plaintext highlighter-rouge">.local/share/chezmoi/</code> and after that you just use the regular workflow from before. Check the changes with <code class="language-plaintext highlighter-rouge">chezmoi diff</code> and apply them with <code class="language-plaintext highlighter-rouge">chezmoi apply</code></p>
+<p>Now the repository will be cloned unde <code class="language-plaintext highlighter-rouge">.local/share/chezmoi/</code>. After that you just use the regular workflow from before. Check the changes with <code class="language-plaintext highlighter-rouge">chezmoi diff</code> and apply them with <code class="language-plaintext highlighter-rouge">chezmoi apply</code></p>
 
 <h2 id="using-templates">Using templates</h2>
 
@@ -95,7 +95,7 @@
   <span class="na">font</span><span class="pi">:</span>
     <span class="na">size</span><span class="pi">:</span> <span class="s">9</span></code></pre></figure>
 
-<p>To see all the data points chezmoi knows about you can run:</p>
+<p>To see all the data points chezmoi knows about, you can run:</p>
 
 <figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>chezmoi data</code></pre></figure>
 
@@ -105,7 +105,7 @@
 
 <h2 id="using-hooks">Using hooks</h2>
 
-<p>One thing I wanted to do was reload my ZSH config whenever I would apply changes with chezmoi. You can do that using scripts created your dotfile repository. The names of these scripts have to start with <code class="language-plaintext highlighter-rouge">run_</code>. After that you can add <code class="language-plaintext highlighter-rouge">before_</code> or <code class="language-plaintext highlighter-rouge">after_</code> to indicate if they should run before changes are applied or after. So you’d have something like <code class="language-plaintext highlighter-rouge">run_after_</code>.</p>
+<p>One thing I wanted to do was reload my ZSH config whenever I would apply changes with chezmoi. You can do that with scripts in your dotfile repository. Their names have to start with <code class="language-plaintext highlighter-rouge">run_</code>. After that you can add <code class="language-plaintext highlighter-rouge">before_</code> or <code class="language-plaintext highlighter-rouge">after_</code> to indicate if they should run before changes are applied or after. So you’d have something like <code class="language-plaintext highlighter-rouge">run_after_*.sh</code>.</p>
 
 <p>In my case I have a <code class="language-plaintext highlighter-rouge">run_after_reload.sh</code> script that just reloads my ZSH config</p>
 
