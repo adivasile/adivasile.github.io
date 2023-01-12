@@ -1,5 +1,5 @@
 .article-list {
-  @apply w-11/12 lg:w-2/4 mx-auto;
+  @apply w-10/12 lg:w-2/4 mx-auto;
 
   li {
     @apply my-6;
@@ -9,7 +9,7 @@
     }
 
     p.title {
-      @apply text-secondary text-lg md:text-2xl;
+      @apply text-secondary text-lg md:text-2xl text-center;
     }
 
     p.abstract {
