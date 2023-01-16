@@ -1,8 +1,9 @@
 .page-content {
-  @apply md:border-secondary h-full md:border-2 mt-16 md:px-2 md:p-4 mb-4;
-  @apply flex flex-col;
-  @apply container w-11/12 mx-auto p-1 border-secondary border-2;
-  justify-content: space-between;
+  @apply mx-auto mt-16 mb-4;
+  @apply flex flex-col justify-between;
+  @apply container relative;
+  @apply w-11/12 h-full;
+  @apply border-secondary border-2; 
 
   .top-ornaments .ornament-title {
     @apply text-lg md:text-3xl lg:text-4xl text-secondary uppercase font-normal tracking-widest;
@@ -94,3 +95,22 @@
     transform: scale(1.01, 1.01);
   }
 }
+
+.footer {
+  @apply absolute;
+  @apply bottom-0;
+  @apply w-full;
+  @apply bg-primary;
+  @apply border-t-2 border-t-secondary;
+  @apply text-neutral;
+
+  .footer-content {
+    @apply h-full mx-auto w-11/12;
+    @apply text-center;
+  }
+
+  a {
+    @apply text-secondary underline;
+  }
+}
+
