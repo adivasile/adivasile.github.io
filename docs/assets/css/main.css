@@ -591,11 +591,6 @@ video {
   padding-right: 0.5rem;
 }
 
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -1612,6 +1607,10 @@ ul.enumeration li {
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  .lg\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
   .lg\:text-2xl {
     font-size: 1.5rem;
