@@ -469,6 +469,10 @@ video {
     max-width: 1536px;
   }
 }
+.relative {
+  position: relative;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -495,12 +499,12 @@ video {
   display: none;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-32 {
   height: 8rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-full {
@@ -525,6 +529,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -581,6 +589,10 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .text-sm {
@@ -767,24 +779,13 @@ video {
 }
 
 .page-content {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 4rem;
   margin-bottom: 1rem;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .page-content {
-    border-width: 2px;
-    --tw-border-opacity: 1;
-    border-color: rgb(186 140 78/var(--tw-border-opacity));
-    padding: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-.page-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -814,14 +815,12 @@ video {
   }
 }
 .page-content {
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  height: 100%;
   width: 91.666667%;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(186 140 78/var(--tw-border-opacity));
-  padding: 0.25rem;
-  justify-content: space-between;
 }
 .page-content .top-ornaments .ornament-title {
   font-size: 1.125rem;
@@ -1063,6 +1062,39 @@ video {
 }
 .home-menu .menu-item:hover {
   transform: scale(1.01, 1.01);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 54 73/var(--tw-bg-opacity));
+  border-top-width: 2px;
+  --tw-border-opacity: 1;
+  border-top-color: rgb(186 140 78/var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(241 242 238/var(--tw-text-opacity));
+}
+.footer .footer-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer .footer-content {
+  height: 100%;
+}
+.footer .footer-content {
+  width: 91.666667%;
+}
+.footer .footer-content {
+  text-align: center;
+}
+.footer a {
+  --tw-text-opacity: 1;
+  color: rgb(186 140 78/var(--tw-text-opacity));
+}
+.footer a {
+  text-decoration-line: underline;
 }
 
 --- --- #main .h-entry {
