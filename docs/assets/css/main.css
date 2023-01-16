@@ -782,7 +782,7 @@ video {
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1075,6 +1075,8 @@ video {
   border-top-color: rgb(186 140 78/var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(241 242 238/var(--tw-text-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .footer .footer-content {
   margin-left: auto;

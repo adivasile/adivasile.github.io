@@ -1,5 +1,5 @@
 .page-content {
-  @apply mx-auto mt-16 mb-4;
+  @apply mx-auto mt-16 mb-16;
   @apply flex flex-col justify-between;
   @apply container relative;
   @apply w-11/12 h-full;
@@ -103,6 +103,7 @@
   @apply bg-primary;
   @apply border-t-2 border-t-secondary;
   @apply text-neutral;
+  @apply py-2;
 
   .footer-content {
     @apply h-full mx-auto w-11/12;
