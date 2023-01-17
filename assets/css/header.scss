@@ -1,39 +1,34 @@
 .header {
   @apply bg-primary border-secondary border-b-2;
 
+  .logo {
+    @apply h-24 w-auto mx-auto;
+    @apply drop-shadow-2xl;
+    @apply absolute;
+    transition: transform 0.3s ease-out;
+  }
+
+  .logo:hover {
+    transform: translateY(0.5rem);
+  }
+
+
   .top-bar {
     @apply bg-secondary h-4 lg:h-8 w-full;
   }
 
-  .header-link {
-    top: -3rem;
-    left: 2rem;
-  }
-
   .bottom-bar {
-    @apply w-11/12 mx-auto h-12 lg:h-24 container flex justify-between items-center;
+    @apply h-12 lg:h-24;
+    @apply mx-auto;
+    @apply flex justify-between items-center;
+    @apply container;
 
-    p {
-      @apply w-96;
+    .title {
+      @apply text-secondary hidden md:block md:text-xl lg:text-2xl uppercase text-start;
     }
 
-    p.occupation {
-      @apply text-end;
+    .menu {
+      @apply text-secondary hidden md:block md:text-xl lg:text-2xl uppercase text-end;
     }
-
-    p.name {
-      @apply text-start;
-    }
-
-    .logo {
-      @apply h-32 lg:h-48 w-auto mx-auto;
-      @apply drop-shadow-2xl;
-        transition: transform 0.3s ease-out;
-    }
-
-    .logo:hover {
-      transform: translateY(0.5rem);
-    }
-
   }
 }
