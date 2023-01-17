@@ -1,15 +1,24 @@
 .header {
-  @apply bg-primary border-secondary border-b-2;
+  @apply bg-primary border-secondary border-b-2 relative;
 
   .logo {
     @apply h-24 w-auto mx-auto;
     @apply drop-shadow-2xl;
     @apply absolute;
     transition: transform 0.3s ease-out;
+
+    top: -20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    img {
+      @apply h-28 md:h-36 lg:h-48;
+    }
   }
 
   .logo:hover {
-    transform: translateY(0.5rem);
+    transform: translate(-50%, 0.5rem);
   }
 
 
@@ -21,14 +30,26 @@
     @apply h-12 lg:h-24;
     @apply mx-auto;
     @apply flex justify-between items-center;
-    @apply container;
+    @apply w-full md:w-11/12 xl:w-10/12;
+
 
     .title {
-      @apply text-secondary hidden md:block md:text-xl lg:text-2xl uppercase text-start;
+      @apply text-secondary uppercase text-start;
+      @apply hidden md:block;
+      @apply text-sm lg:text-lg xl:text-2xl;
     }
 
     .menu {
-      @apply text-secondary hidden md:block md:text-xl lg:text-2xl uppercase text-end;
+      @apply text-secondary hidden md:block uppercase text-end;
+      @apply text-sm lg:text-lg xl:text-2xl;
+
+      a {
+        @apply ml-8;
+      }
+
+      a:hover {
+        @apply underline;
+      }
     }
   }
 }
