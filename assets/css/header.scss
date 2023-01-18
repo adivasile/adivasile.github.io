@@ -27,16 +27,13 @@
   }
 
   .bottom-bar {
-    @apply h-12 lg:h-24;
-    @apply mx-auto;
-    @apply flex justify-between items-center;
-    @apply w-full md:w-11/12 xl:w-10/12;
+    @apply w-full h-12 lg:h-24;
 
 
     .title {
       @apply text-secondary uppercase text-start;
       @apply hidden md:block;
-      @apply text-sm lg:text-lg xl:text-2xl;
+      @apply text-sm lg:text-lg 2xl:text-2xl;
     }
 
     .menu {

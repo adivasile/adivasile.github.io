@@ -1,10 +1,10 @@
 ---
-layout: blog
+layout: default
 title:  "Managing dotfiles with Chezmoi"
 abstract: "If you're a developer on a Unix-like system you probably have a lot of dotfiles in your $HOME folder. It's likely that you don't really pay a lot of attention to them and so they start to get pretty stuffed and complex. Let's learn how to manage them and keep them cleaner"
 date:   2023-01-12 12:59:10 +0200
+container_class: blog-post
 ---
-
 # Intro
 
 If you're a developer on a Unix-like system you probably have a lot of dotfiles in your `$HOME` folder. Files like `.bashrc`, `.zshrc` and others. Most people will probably have had their first encounter with `.bashrc` when they needed to add something to their `$PATH`. These files are used to configure various parts of your system including any software you use during development. 

@@ -44,6 +44,7 @@
     @apply bg-primary border-secondary border-2 p-4 md:p-8 mb-4 flex flex-col md:flex-row md:gap-8;
     @apply w-full md:w-11/12;
     @apply relative;
+    @apply mx-auto;
     align-items: center;
     justify-content: space-between;
     transition: transform 0.3s ease-in-out;
