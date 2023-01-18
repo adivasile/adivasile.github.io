@@ -20,6 +20,7 @@
 
 .blog-post {
   @apply text-neutral;
+  @apply px-2 md:px-4 lg:px-16;
 
   h1, h2, h3, h4 {
     @apply text-secondary;
