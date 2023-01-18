@@ -2,7 +2,7 @@
   @apply mx-auto mt-16 mb-16;
   @apply flex flex-col justify-between;
   @apply container relative;
-  @apply w-11/12 h-full;
+  @apply h-full w-full md:w-11/12 xl:w-10/12;
   @apply border-secondary border-2; 
 
   .top-ornaments .ornament-title {
@@ -44,6 +44,7 @@
     @apply bg-primary border-secondary border-2 p-4 md:p-8 mb-4 flex flex-col md:flex-row md:gap-8;
     @apply w-full md:w-11/12;
     @apply relative;
+    @apply mx-auto;
     align-items: center;
     justify-content: space-between;
     transition: transform 0.3s ease-in-out;
