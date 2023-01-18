@@ -17,12 +17,17 @@
     <div class="w-full min-h-screen relative pb-12"><div class="header">
   <div class="top-bar"></div>
   <div class="bottom-bar">
-    <p class="name text-secondary hidden md:block md:text-xl lg:text-2xl uppercase">Adrian Vasile</p>
-    <a href="/" class="mx-auto">
-      <img class="logo" src="/assets/svg/logo.svg" alt="logo" />
-    </a>
-    <p class="occupation text-secondary hidden md:block md:text-xl lg:text-2xl uppercase">Software Engineer</p>
+    <div class="mx-auto container h-full w-full md:w-11/12 xl:w-10/12 flex justify-between items-center">
+      <p class="title">Adrian Vasile - Software Engineer</p>
+      <div class="menu">
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+      </div>
+    </div>
   </div>
+  <a href="/" class="logo">
+    <img src="/assets/svg/logo.svg" alt="logo" />
+  </a>
 </div>
 
 <div class="page-content bg-primary" aria-label="Content">
@@ -31,7 +36,7 @@
           <h1 class="ornament-title"> Managing dotfiles with Chezmoi</h1>
           <img class="ornament-right" src="/assets/svg/ornament.svg" alt="logo" />
         </div>
-        <div class="container px-2 md:px-4 lg:px-16 blog-post">
+        <div class="container blog-post">
           <h1 id="intro">Intro</h1>
 
 <p>If you’re a developer on a Unix-like system you probably have a lot of dotfiles in your <code class="language-plaintext highlighter-rouge">$HOME</code> folder. Files like <code class="language-plaintext highlighter-rouge">.bashrc</code>, <code class="language-plaintext highlighter-rouge">.zshrc</code> and others. Most people will probably have had their first encounter with <code class="language-plaintext highlighter-rouge">.bashrc</code> when they needed to add something to their <code class="language-plaintext highlighter-rouge">$PATH</code>. These files are used to configure various parts of your system including any software you use during development.</p>
@@ -173,6 +178,5 @@
   </div>
 </div>
 </div>
-
   </body>
 </html>

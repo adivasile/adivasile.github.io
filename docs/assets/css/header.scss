@@ -1,39 +1,52 @@
 .header {
-  @apply bg-primary border-secondary border-b-2;
+  @apply bg-primary border-secondary border-b-2 relative;
+
+  .logo {
+    @apply h-24 w-auto mx-auto;
+    @apply drop-shadow-2xl;
+    @apply absolute;
+    transition: transform 0.3s ease-out;
+
+    top: -20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    img {
+      @apply h-28 md:h-36 lg:h-48;
+    }
+  }
+
+  .logo:hover {
+    transform: translate(-50%, 0.5rem);
+  }
+
 
   .top-bar {
     @apply bg-secondary h-4 lg:h-8 w-full;
   }
 
-  .header-link {
-    top: -3rem;
-    left: 2rem;
-  }
-
   .bottom-bar {
-    @apply w-11/12 mx-auto h-12 lg:h-24 container flex justify-between items-center;
+    @apply w-full h-12 lg:h-24;
 
-    p {
-      @apply w-96;
+
+    .title {
+      @apply text-secondary uppercase text-start;
+      @apply hidden md:block;
+      @apply text-sm lg:text-lg 2xl:text-2xl;
     }
 
-    p.occupation {
-      @apply text-end;
-    }
+    .menu {
+      @apply text-secondary hidden md:block uppercase text-end;
+      @apply text-sm lg:text-lg xl:text-2xl;
 
-    p.name {
-      @apply text-start;
-    }
+      a {
+        @apply ml-8;
+      }
 
-    .logo {
-      @apply h-32 lg:h-48 w-auto mx-auto;
-      @apply drop-shadow-2xl;
-        transition: transform 0.3s ease-out;
+      a:hover {
+        @apply underline;
+      }
     }
-
-    .logo:hover {
-      transform: translateY(0.5rem);
-    }
-
   }
 }
