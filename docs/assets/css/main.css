@@ -801,7 +801,7 @@ video {
     line-height: 1.75rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
   .header .bottom-bar .menu {
     font-size: 1.5rem;
     line-height: 2rem;
