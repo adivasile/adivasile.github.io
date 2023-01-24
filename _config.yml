@@ -25,6 +25,7 @@ highlighter: rouge
 
 plugins:
   - jekyll-postcss
+  - jekyll-sitemap
 
 postcss:
   cache: false

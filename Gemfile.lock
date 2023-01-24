@@ -38,6 +38,8 @@ GEM
     jekyll-postcss (0.5.0)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.6.3)
@@ -101,6 +103,7 @@ DEPENDENCIES
   jekyll (~> 4.3.1)
   jekyll-feed (~> 0.6)
   jekyll-postcss
+  jekyll-sitemap
   kramdown-parser-gfm
   rouge
   rubocop
