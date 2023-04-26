@@ -495,6 +495,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-full {
   height: 100%;
 }
@@ -547,6 +551,10 @@ video {
   gap: 1rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -572,14 +580,18 @@ video {
   border-color: transparent;
 }
 
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 54 73/var(--tw-bg-opacity));
+}
+
 .bg-background {
   --tw-bg-opacity: 1;
   background-color: rgb(47 98 113/var(--tw-bg-opacity));
 }
 
-.bg-primary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(50 54 73/var(--tw-bg-opacity));
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-16 {
@@ -812,6 +824,11 @@ video {
 }
 .header .bottom-bar .menu a:hover {
   text-decoration-line: underline;
+}
+
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(47 98 113/var(--tw-bg-opacity));
 }
 
 .page-content {
@@ -1254,6 +1271,22 @@ video {
 .entry {
   margin-bottom: 2rem;
 }
+.entry .header .company-description {
+  display: flex;
+}
+.entry .header .company-description {
+  justify-content: space-between;
+}
+.entry .header .company-description {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+@media (min-width: 768px) {
+  .entry .header .company-description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
 .entry .header em {
   text-align: center;
 }
@@ -1646,6 +1679,82 @@ ul.enumeration li {
     border-left-color: black;
   }
 }
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  .header {
+    display: none;
+  }
+  .page-content {
+    margin-top: 1rem;
+    border-style: none;
+  }
+  .page-content .top-ornaments {
+    display: none;
+  }
+  .page-content .bottom-ornaments {
+    display: none;
+  }
+  body {
+    --tw-bg-opacity: 1;
+    background-color: rgb(50 54 73/var(--tw-bg-opacity));
+  }
+  .footer {
+    display: none;
+  }
+  #about {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  #about .ornament-header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  #about .ornament-header img {
+    width: 8rem;
+  }
+  #about .ornament-header h1 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  #about #key-skills ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  #about #key-skills ul li {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  #about #key-skills ul li {
+    line-height: 0.75rem;
+  }
+  #about .entry {
+    margin-bottom: 1rem;
+  }
+  #about .entry .company-description {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  #about .entry .header {
+    flex-direction: row;
+  }
+  #about .entry .header {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  #about .print-margin-placeholder {
+    margin-top: 2.5rem;
+  }
+  .print\:block {
+    display: block;
+  }
+}
 @media (min-width: 768px) {
   .md\:w-11\/12 {
     width: 91.666667%;
@@ -1656,10 +1765,6 @@ ul.enumeration li {
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
