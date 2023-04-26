@@ -41,3 +41,4 @@ What I'm trying to say is that I saw adjacent benefits whenever I learned a new 
 And this leads me right to my next reason:
 
 ## The synergies
+
