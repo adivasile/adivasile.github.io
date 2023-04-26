@@ -1,0 +1,74 @@
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    .header {
+        @apply hidden;
+    }
+
+    .page-content {
+        .top-ornaments {
+            @apply hidden;
+        }
+
+        .bottom-ornaments {
+            @apply hidden;
+        }
+    }
+
+    .page-content {
+        @apply border-none mt-4;
+    }
+
+    body {
+        @apply bg-primary;
+    }
+
+    .footer {
+        @apply hidden;
+    }
+
+    #about {
+        @apply text-xs px-20 py-2;
+
+        .ornament-header {
+            @apply my-4;
+
+            img {
+                @apply w-32;
+            }
+
+            h1 {
+                @apply text-sm;
+            }
+        }
+
+        #key-skills {
+            ul {
+                @apply my-2;
+
+                li {
+                    @apply text-xs leading-3;
+                }
+            }
+        }
+
+        .entry {
+            @apply mb-4;
+
+            .company-description {
+                @apply text-xs;
+            }
+
+            .header {
+                @apply text-sm flex-row;
+            }
+        }
+
+        .print-margin-placeholder {
+            @apply mt-10;
+        }
+    }
+}

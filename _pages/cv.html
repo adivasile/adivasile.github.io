@@ -5,9 +5,17 @@ layout: default
 ---
 
 <div id="about">
+  {% include about/contact_info.html %}
   {% include about/key_skills.html %}
   {% include about/work_experience.html %}
+
+  <p style="page-break-before: always">
+  <div class="print-margin-placeholder"></div>
+
   {% include about/projects.html %}
+
+  <p style="page-break-before: always">
+  <div class="print-margin-placeholder"></div>
 
   <div id="education">
     {% include shared/ornament_header.html title="Education" %}
@@ -20,6 +28,7 @@ layout: default
       <p>Bachelor of Computer Science</p>
     </div>
   </div>
+
 
   <div id="personal">
     {% include shared/ornament_header.html title="Personal" %}
@@ -45,6 +54,7 @@ layout: default
         <li>Music</li>
         <li>Playing guitar</li>
         <li>Snowboarding</li>
+        <li>Chess</li>
       </ul>
     </div>
   </div>

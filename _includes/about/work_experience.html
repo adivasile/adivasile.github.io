@@ -2,10 +2,14 @@
   {% include shared/ornament_header.html title="Experience" %}
 
   {% for role in site.data.work_roles %}
+    {% if role.page_break %}
+        <p style="page-break-before: always">
+        <div class="print-margin-placeholder"></div>
+    {% endif %}
     <div class="entry">
       <div class="header">
         <em>{{ role.name }}</em>
-        <div class="flex justify-between text-sm md:text-base">
+        <div class="company-description">
           <em class="mr-6 not-italic">@ {{ role.company }}</em>
           <em>{{ role.start_date | date: "%b %Y" }} - {{ role.end_date | date: "%b %Y" }}</em>
         </div>

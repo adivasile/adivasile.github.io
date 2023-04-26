@@ -1,3 +1,7 @@
+body {
+    @apply bg-background;
+}
+
 .page-content {
   @apply mx-auto mt-16 mb-16;
   @apply flex flex-col justify-between;

@@ -34,6 +34,10 @@
 
   .header {
 
+    .company-description {
+      @apply flex justify-between text-sm md:text-base;
+    }
+
     em {
       @apply text-center;
     }
