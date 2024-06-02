@@ -1,5 +1,18 @@
 [
   {
+    "name": "Senior Fullstack Software Engineer",
+    "company": "Golf Genius Software ",
+    "start_date": "2023-06-01",
+    "end_date": "present",
+    "description": "Fullstack Software Enginneer responsible for technical planning, development and maintenance of new solutions and features",
+    "items": [
+        "Estimate, plan and develop new features and solutions for our backend Ruby on Rails API and frontend React application",
+        "Improve coding standards, performance and test coverage",
+        "Mentoring and providing technical guidance to team members",
+        "Regular processes of maintenance and bug fixing"
+    ]
+  },
+  {
     "name": "Senior Software Engineer",
     "company": "MyTime",
     "start_date": "2021-09-01",
